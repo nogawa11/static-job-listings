@@ -10,11 +10,9 @@ const toHTML = (data) => {
         <img class="logo" src="${data.logo}" alt="${data.company}">
         <div class="job-text">
           <div class="company">
-            <h5>
-              ${data.company}
-              <span class="tag-new ${data.new}">NEW!</span>
-              <span class="tag-featured ${data.featured}">FEATURED</span>
-            </h5>
+            <h5>${data.company}</h5>
+            <h5 class="tag-new ${data.new}">NEW!</h5>
+            <h5 class="tag-featured ${data.featured}">FEATURED</h5>
           </div>
           <div class="job-role">
             <a href="#">${data.title}</a>

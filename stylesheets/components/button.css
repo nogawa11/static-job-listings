@@ -11,9 +11,15 @@
 .button-clear.active {
   display: block;
   background-color: white;
-  color: hsl(180, 29%, 50%);
+  color: hsl(180, 14%, 20%);
   font-family: inherit;
   font-weight: 500;
-  text-decoration: underline;
+  text-decoration: none;
   border: none;
+  transition: 0.5s;
+}
+
+.button-clear.active:hover {
+  color: hsl(180, 29%, 50%);
+  text-decoration: underline;
 }
