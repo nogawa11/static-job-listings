@@ -1,97 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@import url('components/button.css');
 @import url('components/card.css');
+@import url('components/filter.css');
+@import url('components/header.css');
 @import url('components/logo.css');
 
-.header {
-  background-image: url('../images/bg-header-desktop.svg');
-  height: 170px;
-  background-color: hsl(180, 29%, 50%);
-  background-size: cover;
-  background-position: center;
-}
-
 body {
-  margin: 0;
-  padding: 0;
   background-color: hsl(180, 52%, 96%);
   font-family: 'Spartan', sans-serif;
+  padding: 0;
+  margin: 0;
 }
 
 h5 {
-  margin: 0;
-  padding: 0;
   color: hsl(180, 29%, 50%);
+  padding: 0;
+  margin: 0;
 }
 
 p {
   padding: 0;
   margin: 0;
   font-size: 0.9em;
-}
-
-.filter-list {
-  background: white;
-  display: flex;
-  align-items: center;
-  gap: 0.5em;
-}
-
-.filters {
-  display: flex;
-  align-items: center;
-  background-color: hsl(180, 29%, 50%);
-  border-radius: 4px;
-}
-
-.filters:hover {
-  background-color: hsl(180, 14%, 20%)
-}
-
-.filters > .filter {
-  background-color: hsl(180, 31%, 95%);
-  color: hsl(180, 29%, 50%);
-  padding: 0.8em 0.8em 0.6em 0.8em;
-  font-size: 0.8em;
-  font-weight: 600;
-  border-radius: 4px 0 0 4px;
-}
-
-.button-remove {
-  width: 2em;
-  display: flex;
-  justify-content: center;
-}
-
-.button-clear {
-  display: none;
-}
-
-.button-clear.active {
-  display: block;
-  border: none;
-  background-color: white;
-  color: hsl(180, 29%, 50%);
-  text-decoration: underline;
-  font-family: inherit;
-  font-weight: 500;
-}
-
-.filter-field.active {
-  display: flex;
-  justify-content: space-between;
-  background-color: white;
-  padding: 1em 2em;
-  margin: 0 5em;
-  border-radius: 6px;
-  top: -2em;
-  position: relative;
-  box-shadow: 2px 8px 10px 2px hsl(180deg 29% 50% / 20%);
-}
-
-.container {
-  max-width: 100%;
-  width: 1120px;
-  min-height: 100vh;
-  margin: 0 auto;
-  padding: 0 20px;
 }

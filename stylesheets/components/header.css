@@ -1,0 +1,7 @@
+.header {
+  background-image: url('../../images/bg-header-desktop.svg');
+  background-color: hsl(180, 29%, 50%);
+  background-size: cover;
+  background-position: center;
+  height: 170px;
+}

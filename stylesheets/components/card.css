@@ -7,12 +7,12 @@
 }
 
 .job-listing {
-  background-color: white;
   display: flex;
-  margin-bottom: 1.5em;
-  padding: 1.5em;
   align-items: center;
   justify-content: space-between;
+  background-color: white;
+  padding: 1.5em;
+  margin-bottom: 1.5em;
   border-radius: 6px;
   border-left: 0.4em solid white;
   box-shadow: 2px 8px 10px 2px hsl(180deg 29% 50% / 20%);
@@ -22,19 +22,9 @@
   border-left: 0.4em solid hsl(180, 29%, 50%);
 }
 
-.job-details {
-  display: flex;
-  color: hsl(180, 8%, 52%);
-}
-
 .job-info {
   display: flex;
   align-items: center;
-}
-
-.job-filters {
-  display: flex;
-  gap: 0.5em;
 }
 
 .job-text {
@@ -44,11 +34,11 @@
 .tag-new.true {
   background-color: hsl(180, 29%, 50%);
   color: white;
-  padding: 0.6em 0.6em 0.3em;
-  border-radius: 50px;
   font-size: 0.8em;
-  margin: 0 0.5em 0 1em;
   font-weight: 600;
+  padding: 0.6em 0.6em 0.3em;
+  margin: 0 0.5em 0 1em;
+  border-radius: 50px;
 }
 
 .tag-new.false {
@@ -58,10 +48,10 @@
 .tag-featured.true {
   background-color:  hsl(180, 14%, 20%);
   color: white;
-  padding: 0.6em 0.6em 0.3em;
-  border-radius: 50px;
   font-size: 0.8em;
   font-weight: 600;
+  padding: 0.6em 0.6em 0.3em;
+  border-radius: 50px;
 }
 
 .tag-featured.false {
@@ -71,11 +61,12 @@
 .job-role {
   margin: 1em 0;
 }
+
 .job-role a {
-  text-decoration: none;
-  padding: 0;
   color: hsl(180, 14%, 20%);
   font-weight: 700;
+  padding: 0;
+  text-decoration: none;
   transition: 0.5s;
 }
 
@@ -83,12 +74,22 @@
   color: hsl(180, 29%, 50%);
 }
 
+.job-details {
+  display: flex;
+  color: hsl(180, 8%, 52%);
+}
+
+.job-filters {
+  display: flex;
+  gap: 0.5em;
+}
+
 .filter {
   background-color: hsl(180, 31%, 95%);
   color: hsl(180, 29%, 50%);
-  padding: 0.8em 0.8em 0.6em 0.8em;
   font-size: 0.8em;
   font-weight: 600;
+  padding: 0.8em 0.8em 0.6em 0.8em;
   border-radius: 4px;
   transition: 0.5s;
 }

@@ -1,0 +1,38 @@
+.filter-field.active {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  top: -2em;
+  background-color: white;
+  padding: 1em 2em;
+  margin: 0 5em;
+  border-radius: 6px;
+  box-shadow: 2px 8px 10px 2px hsl(180deg 29% 50% / 20%);
+}
+
+.filter-list {
+  display: flex;
+  align-items: center;
+  background: white;
+  gap: 0.5em;
+}
+
+.filters {
+  display: flex;
+  align-items: center;
+  background-color: hsl(180, 29%, 50%);
+  border-radius: 4px;
+}
+
+.filters:hover {
+  background-color: hsl(180, 14%, 20%)
+}
+
+.filters > .filter {
+  background-color: hsl(180, 31%, 95%);
+  color: hsl(180, 29%, 50%);
+  font-size: 0.8em;
+  font-weight: 600;
+  padding: 0.8em 0.8em 0.6em 0.8em;
+  border-radius: 4px 0 0 4px;
+}
