@@ -5,28 +5,34 @@ let filters = [];
 
 const toHTML = (data) => {
   return `
-    <div class="job-listing">
-      <img class="logo" src="${data.logo}" alt="${data.company}">
-      <div class="job-text">
-        <div class="company">
-          <h5>${data.company}</h5>
-          <span class="tag-new ${data.new}">New!<span>
-          <span class="tag-featured ${data.featured}">Featured!<span>
+    <div class="job-listing ${data.featured}">
+      <div class="job-info">
+        <img class="logo" src="${data.logo}" alt="${data.company}">
+        <div class="job-text">
+          <div class="company">
+            <h5>
+              ${data.company}
+              <span class="tag-new ${data.new}">NEW!</span>
+              <span class="tag-featured ${data.featured}">FEATURED</span>
+            </h5>
+          </div>
+          <div class="job-role">
+            <a href="#">${data.title}</a>
+          </div>
+          <div class="job-details">
+            <p>
+              <span>${data.posted} •</span>
+              <span>${data.type} •</span>
+              <span>${data.location}</span>
+            </p>
+          </div>
         </div>
-        <div class="job-role">
-          <h4>${data.title}</h4>
-        </div>
-        <div class="job-details">
-          <span>${data.posted}</span>
-          <span>${data.type}</span>
-          <span>${data.location}</span>
-        </div>
-        <div class="job-filters">
-          <div class="filter" data-role="${data.role}">${data.role}</div>
-          <div class="filter" data-level="${data.level}">${data.level}</div>
-          ${languagesToHTML(data.languages)}
-          ${toolsToHTML(data.tools)}
-        </div>
+      </div>
+      <div class="job-filters">
+        <div class="filter" data-role="${data.role}">${data.role}</div>
+        <div class="filter" data-level="${data.level}">${data.level}</div>
+        ${languagesToHTML(data.languages)}
+        ${toolsToHTML(data.tools)}
       </div>
     </div>
   `
@@ -56,12 +62,14 @@ render(jobData);
 
 const addFilter = (filter) => {
   document.querySelector('.filter-field').classList.add('active');
+  jobListings.classList.add('active')
   const html = `
     <div class="filters">
         <div class="filter">${filter}</div>
-        <div class="remove-btn"><img src="images/icon-remove.svg" alt="remove" data-remove="remove"></div>
+        <div class="button-remove"><img src="images/icon-remove.svg" alt="remove" data-remove="remove"></div>
     </div>`;
   filterList.insertAdjacentHTML('beforeend', html);
+  buttonClear.classList.add('active')
 }
 
 const filterListing = (arrFilters, arrData) => {
@@ -78,6 +86,8 @@ const removeFilter = (item, filter) => {
   if (filters.length <= 0) {
     document.querySelector('.filter-field').classList.remove('active');
     render(jobData);
+    buttonClear.classList.remove('active')
+    jobListings.classList.remove('active')
   } else {
     filterListing(filters, jobData);
   }
@@ -100,13 +110,15 @@ buttonClear.addEventListener('click', event => {
   document.querySelector('.filter-field').classList.remove('active');
   filterList.innerHTML = '';
   render(jobData);
+  buttonClear.classList.remove('active')
+  jobListings.classList.remove('active')
 });
 
 filterList.addEventListener('click', event => {
   event.preventDefault();
   if (event.target.dataset.remove) {
     let node = event.target.parentNode.parentNode;
-    let removeFilterName = node.querySelector('.filter__name').textContent;
+    let removeFilterName = node.querySelector('.filter').textContent;
     removeFilter(node, removeFilterName);
   }
 });

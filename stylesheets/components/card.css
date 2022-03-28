@@ -1,4 +1,99 @@
+.job-listings {
+  margin: 3em 5em;
+}
+
+.job-listings.active {
+  margin: 0em 5em;
+}
+
 .job-listing {
   background-color: white;
   display: flex;
+  margin-bottom: 1.5em;
+  padding: 1.5em;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 6px;
+  border-left: 0.4em solid white;
+  box-shadow: 2px 8px 10px 2px hsl(180deg 29% 50% / 20%);
+}
+
+.job-listing.true {
+  border-left: 0.4em solid hsl(180, 29%, 50%);
+}
+
+.job-details {
+  display: flex;
+  color: hsl(180, 8%, 52%);
+}
+
+.job-info {
+  display: flex;
+  align-items: center;
+}
+
+.job-filters {
+  display: flex;
+  gap: 0.5em;
+}
+
+.job-text {
+  margin-left: 1.5em;
+}
+
+.tag-new.true {
+  background-color: hsl(180, 29%, 50%);
+  color: white;
+  padding: 0.6em 0.6em 0.3em;
+  border-radius: 50px;
+  font-size: 0.8em;
+  margin: 0 0.5em 0 1em;
+  font-weight: 600;
+}
+
+.tag-new.false {
+  display: none;
+}
+
+.tag-featured.true {
+  background-color:  hsl(180, 14%, 20%);
+  color: white;
+  padding: 0.6em 0.6em 0.3em;
+  border-radius: 50px;
+  font-size: 0.8em;
+  font-weight: 600;
+}
+
+.tag-featured.false {
+  display: none;
+}
+
+.job-role {
+  margin: 1em 0;
+}
+.job-role a {
+  text-decoration: none;
+  padding: 0;
+  color: hsl(180, 14%, 20%);
+  font-weight: 700;
+  transition: 0.5s;
+}
+
+.job-role a:hover {
+  color: hsl(180, 29%, 50%);
+}
+
+.filter {
+  background-color: hsl(180, 31%, 95%);
+  color: hsl(180, 29%, 50%);
+  padding: 0.8em 0.8em 0.6em 0.8em;
+  font-size: 0.8em;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: 0.5s;
+}
+
+.filter:hover {
+  background-color: hsl(180, 29%, 50%);
+  color: hsl(180, 31%, 95%);
 }
